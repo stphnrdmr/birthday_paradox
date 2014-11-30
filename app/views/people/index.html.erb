@@ -1,23 +1,19 @@
-<h1>Geburtstage!</h1>
+<h1>Result!</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Geburtstag</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h2>Geburtstage (<%= @people.length %>)</h1>
+<ul>
+  <% @people.each do | person | %>
+    <li>
+      <%= person.birthday %>
+    </li>
+  <% end %>
+</ul>
 
-  <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        <td><%= person.birthday %></td>
-        <td><%= link_to 'Show', person %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Neue Person', new_person_path %>
+<h2>Doppelte Geburtstage (<%= @duplicate.length %>)</h2>
+<ul>
+  <% @duplicate.each do | dupl | %>
+  <li>
+    <%= dupl.birthday %>
+  </li>
+<% end %>
+</ul>
