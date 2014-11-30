@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  birthday: 2014-11-30
+
+two:
+  birthday: 2014-11-30

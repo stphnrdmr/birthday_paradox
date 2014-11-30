@@ -1,0 +1,23 @@
+<h1>Geburtstage!</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Geburtstag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.birthday %></td>
+        <td><%= link_to 'Show', person %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Neue Person', new_person_path %>

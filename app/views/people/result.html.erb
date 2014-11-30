@@ -1,0 +1,19 @@
+<h1>Result!</h1>
+
+<h2>Geburtstage (<%= @people.length %>)</h1>
+<ul>
+  <% @people.each do | person | %>
+    <li>
+      <%= person.birthday %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Doppelte Geburtstage (<%= @duplicate.length %>)</h2>
+<ul>
+  <% @duplicate.each do | dupl | %>
+  <li>
+    <%= dupl.birthday %>
+  </li>
+<% end %>
+</ul>
